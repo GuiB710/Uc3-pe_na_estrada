@@ -1,0 +1,20 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}Produtos | Pé na Estrada{% endblock %}
+
+{% block content %}
+    <ul>
+        <li>
+            ID: {{produto.pk}}
+        </li>
+
+        <li>
+            Name: {{produto.name}}
+        </li>
+
+        <li>
+            Descrição: {{produto.descrição}}
+        </li>
+    </ul>
+{% endblock %}

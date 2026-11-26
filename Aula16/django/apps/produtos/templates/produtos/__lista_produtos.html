@@ -1,0 +1,20 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}Produtos | Pé na Estrada{% endblock %}
+
+{% block content %}
+    <table>  
+        {% for produto in produtos %}
+            <tr> 
+                <td> {{produto.nome}} </td> 
+                <td> {{produto.descricao}} </td> 
+                <td class="text-end"> R$ {{produto.preco}} </td>
+            </tr>
+        {% empty %}
+            <tr> 
+                <td> Não á produtos cadastrado <td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

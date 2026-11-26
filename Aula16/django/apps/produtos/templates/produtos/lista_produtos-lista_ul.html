@@ -1,0 +1,18 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}Produtos | Pé na Estrada{% endblock %}
+
+{% block content %}
+    <ul>  
+        {% for produto in produtos %}
+            <li> 
+                {{produto.nome}} - 
+                {{produto.descricao}} - 
+                {{produto.preco}} 
+            </li>
+        {% empty %}
+            <li> Não á produtos cadastrado </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

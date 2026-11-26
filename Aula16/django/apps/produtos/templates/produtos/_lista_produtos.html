@@ -1,0 +1,59 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}Produtos | Pé na Estrada{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Produtos</h1>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for produto in produtos %}
+            <div class="col">
+                <article class="card h-100">
+                    <header class="card-header p-0 border-0">
+                        {% if produto.imagem %}
+                            <img
+                                src="{{ produto.imagem.url }}"
+                                class="card-img-top"
+                                alt="{{ produto.nome }}"
+                            >
+                        {% else %}
+                            <img
+                                src="{% static 'produtos/imagem-padrao.svg' %}"
+                                class="card-img-top"
+                                alt="Imagem ilustrativa para {{ produto.nome }}"
+                            >
+                        {% endif %}
+                    </header>
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="card-title h5">{{ produto.nome }}</h2>
+                        <p class="card-text text-muted">{{ produto.categoria.nome }}</p>
+                        {% if produto.descricao %}
+                            <p class="card-text">{{ produto.descricao }}</p>
+                        {% endif %}
+                        <p class="card-text mt-auto">
+                            <strong>R$ {{ produto.preco|floatformat:2 }}</strong>
+                        </p>
+                        <p class="card-text mb-0">
+                            <small class="text-muted">
+                                Estoque: {{ produto.quantidade_estoque }}
+                            </small>
+                        </p>
+                    </div>
+                    <footer class="card-footer bg-transparent d-flex gap-2">
+                        <button type="button" class="btn btn-primary flex-fill">
+                            Adicionar ao carrinho
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary flex-fill">
+                            Detalhes
+                        </button>
+                    </footer>
+                </article>
+            </div>
+        {% empty %}
+            <div class="col">
+                <p>Nenhum produto cadastrado.</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

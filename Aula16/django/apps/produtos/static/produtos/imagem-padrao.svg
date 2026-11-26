@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title">
+  <title id="title">Imagem ilustrativa de produto</title>
+  <rect width="640" height="400" fill="#f1f3f5"/>
+  <path d="M205 245c28 0 55-17 72-44l35-55 43 33c24 18 51 30 80 37l52 13c24 6 39 22 39 40 0 17-14 30-34 30H167c-21 0-35-10-35-25 0-16 17-29 40-29h33z" fill="#adb5bd"/>
+  <path d="M134 286h392c-3 15-17 24-37 24H167c-18 0-30-8-33-24z" fill="#6c757d"/>
+  <path d="m306 187 35 25m-56-2 34 24m-54-1 35 23" fill="none" stroke="#f8f9fa" stroke-linecap="round" stroke-width="9"/>
+  <circle cx="468" cy="111" r="31" fill="#dee2e6"/>
+  <path d="M94 111h130M112 87v48m32-48v48m32-48v48" fill="none" stroke="#ced4da" stroke-linecap="round" stroke-width="8"/>
+</svg>
